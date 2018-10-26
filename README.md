@@ -46,3 +46,5 @@ I have added a bid, which can act as a key for the bank. Since multiple banks ca
 
 bid→ bcontact, bname, baddress
  
+ 
+ https://docs.google.com/document/d/1ENdEus3b2J3rJ-fXZ24TTr69GlXSdRIoVseGuyXFwo8/edit?usp=sharing
