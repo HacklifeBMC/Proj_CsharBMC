@@ -45,3 +45,4 @@ Bank(bid: string, bcontact: string, bname: string, baddress: string)
 I have added a bid, which can act as a key for the bank. Since multiple banks can have the same contact, name, and address and bid is the primary key, this is already in BCNF. FD:
 
 bid→ bcontact, bname, baddress
+ 
