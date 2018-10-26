@@ -6,8 +6,8 @@ Copy right 2018
 Problem Statement
 
 
-    Blood banks provide a vital service. People give blood to these banks, and in turn, this blood is used by patients in need of blood. People need blood for a variety of reasons and blood banks are incredibly important. Every two seconds someone is in need of blood according to the American Red Cross.  People have specific blood types, which determine who they can give blood to and receive blood from. AB+ blood types are the universal receivers (can receive blood from anyone) and O- blood types are the universal donors (can donate blood to anyone). We have created a database by which donors, banks, and patients can be found along with important information about each group, such as disease, blood type, etc.
-    In our first project, we created an ERD and schema for blood banks. In this project, we have refined our schema to meet the standards of BCNF. We have converted our queries into SQL and brought our database to life using Visual Studio, including a GUI. We have also expanded our schema to provide more information.
+    Blood banks provide a vital service. People give blood to these banks, and in turn, this blood is used by patients in need of blood. People need blood for a variety of reasons and blood banks are incredibly important. Every two seconds someone is in need of blood according to the American Red Cross.  People have specific blood types, which determine who they can give blood to and receive blood from. AB+ blood types are the universal receivers (can receive blood from anyone) and O- blood types are the universal donors (can donate blood to anyone). I've created a database by which donors, banks, and patients can be found along with important information about each group, such as disease, blood type, etc.
+    In my first project, I created an ERD and schema for blood banks. In this project, I have refined the schema to meet the standards of BCNF. I've converted queries into SQL and brought the database to life using Visual Studio, including a GUI. I've also expanded the schema to provide more information.
 
 Functional Dependencies and Schema Refinement
 
@@ -26,7 +26,7 @@ did → (dname, dtype, dmedrep, daddress, dcontact)
 
 Bank (BankID: int, bname: string, bcontact: string,baddress: string)
 
-After receiving input from one of our TAs, we have decided that the structure provided for first project was inadequate, because it fails to provide a date for donations and receiving blood. The best way to address this is by putting this information in relation tables for donated blood and received blood. These tables would look like this:
+After receiving more input, I have decided that the structure provided for first project was inadequate, because it fails to provide a date for donations and receiving blood. The best way to address this is by putting this information in relation tables for donated blood and received blood. These tables would look like this:
 
 Receive_Blood(RecID: int, date: string)
 
@@ -38,10 +38,10 @@ The keys in these tables would be the ID of the donation or reception. The funct
 rid→ date
 ddid → date
 
-We also much change our Bank schema, which had been functioning as these tables above. Updated below:
+I also much change the Bank schema, which had been functioning as these tables above. Updated below:
 
 Bank(bid: string, bcontact: string, bname: string, baddress: string)
 
-We have added a bid, which can act as a key for the bank. Since multiple banks can have the same contact, name, and address and bid is the primary key, this is already in BCNF. FD:
+I have added a bid, which can act as a key for the bank. Since multiple banks can have the same contact, name, and address and bid is the primary key, this is already in BCNF. FD:
 
 bid→ bcontact, bname, baddress
